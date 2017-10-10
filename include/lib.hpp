@@ -1,5 +1,5 @@
 /**
- * @file Camera.hpp
+ * @file lib.hpp
  * @author     Ravi Bhadeshiya
  * @version    1.0
  * @copyright  MIT License (c) 2017 Ravi Bhadeshiya
