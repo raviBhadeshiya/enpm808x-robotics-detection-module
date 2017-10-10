@@ -1,7 +1,7 @@
 # Robotics detection modules
 [![Build Status](https://travis-ci.org/raviBhadeshiya/enpm808x-robotics-detection-module.svg?branch=master)](https://travis-ci.org/raviBhadeshiya/enpm808x-robotics-detection-module)
 [![Coverage Status](https://coveralls.io/repos/github/raviBhadeshiya/enpm808x-robotics-detection-module/badge.svg?branch=master)](https://coveralls.io/github/raviBhadeshiya/enpm808x-robotics-detection-module?branch=master)
-[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?style=plastic)](LICENSE.md)
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](LICENSE.md)
 ---
 
 
