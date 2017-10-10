@@ -4,6 +4,9 @@ project (scratch)
 # Add project cmake modules to path.
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
+# include opencv
+find_package( OpenCV REQUIRED)
+
 # We probably don't want this to run on every build.
 option(COVERAGE "Generate Coverage Data" OFF)
 
@@ -27,3 +30,5 @@ set(CMAKE_CXX_STANDARD 14)
 add_subdirectory(app)
 add_subdirectory(test)
 add_subdirectory(vendor/googletest/googletest)
+
+file(COPY data DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
