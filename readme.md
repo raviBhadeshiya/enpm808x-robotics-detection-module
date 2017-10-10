@@ -31,3 +31,6 @@ make
 make code_coverage
 ```
 This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
+
+## SIP Process
+To see [Click Here](https://docs.google.com/spreadsheets/d/1QMfyDhY2k-3UoVmqBBLPma-o_mvVv3tEnGuCV8GbJtA/edit?usp=sharing)
