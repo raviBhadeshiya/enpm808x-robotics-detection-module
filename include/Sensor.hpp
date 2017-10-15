@@ -12,16 +12,11 @@ template <class T>
  */
 class Sensor {
  public:
-    Sensor() : isRunning_(false) {}
-
+    Sensor() {}
     virtual ~Sensor() {}
-    virtual bool isRunning() = 0;
+    virtual bool isOpened() = 0;
     virtual void update() = 0;
     virtual T getData() = 0;
-
- private:
-    bool isRunning_;
-    T data_;
 };
 
 // template <class T>
