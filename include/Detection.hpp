@@ -30,7 +30,7 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
 
-#include <Module.hpp>
+#include "Module.hpp"
 
 #define DEBUG_DETCTION
 /**
@@ -91,7 +91,7 @@ class Detection : public Module {
      *
      * @return     return the rendered object as image
      */
-    auto render(const cv::Mat& frame, const cv::Mat& detectionMat) -> cv::Mat;
+    auto render(cv::Mat frame, const cv::Mat& detectionMat) -> cv::Mat;
     /**
      * @brief      Determines if setup
      *
