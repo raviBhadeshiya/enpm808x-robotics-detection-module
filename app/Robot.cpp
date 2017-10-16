@@ -4,7 +4,8 @@
  * @version    1.0
  * @copyright  MIT License (c) 2017 Ravi Bhadeshiya
  */
-#include <Robot.hpp>
+#include <memory>
+#include "Robot.hpp"
 
 // Create robot object
 Robot::Robot() {}

@@ -13,23 +13,21 @@
  * The deep learning-based object detector can process
  * approximately 10-15 FPS (depending on the speed of your system)
  *
- * @cite This sample uses <a href="https://arxiv.org/abs/1512.02325">Single-Shot Detector</a>
+ * @cite This module uses <a href="https://arxiv.org/abs/1512.02325">Single-Shot Detector</a>
  * to detect objects on image. For more info:
  * <a href="https://github.com/weiliu89/caffe/tree/ssd#models">Click Here</a>
  *
  */
 #pragma once
+#include <opencv2/dnn.hpp>
+#include <opencv2/dnn/shape_utils.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/highgui.hpp>
 #include <vector>
 #include <string>
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
-
-#include <opencv2/dnn.hpp>
-#include <opencv2/dnn/shape_utils.hpp>
-#include <opencv2/imgproc.hpp>
-#include <opencv2/highgui.hpp>
-
 #include "Module.hpp"
 
 #define DEBUG_DETCTION

@@ -4,7 +4,9 @@
  * @version    1.0
  * @copyright  MIT License (c) 2017 Ravi Bhadeshiya
  */
-#include <Camera.hpp>
+#include <string>
+#include <vector>
+#include "Camera.hpp"
 
 // Default constructor
 Camera::Camera() {

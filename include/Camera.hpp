@@ -12,10 +12,10 @@
  *
  */
 #pragma once
+#include <opencv2/opencv.hpp>
 #include <memory>
 #include <string>
 #include <vector>
-#include <opencv2/opencv.hpp>
 #include "Sensor.hpp"
 // #define CAMERA_TEST // Toggle comment as per requirements
 

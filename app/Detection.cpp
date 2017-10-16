@@ -4,6 +4,8 @@
  * @version    1.0
  * @copyright  MIT License (c) 2017 Ravi Bhadeshiya
  */
+#include <boost/range/irange.hpp>
+#include <vector>
 #include "Detection.hpp"
 
 Detection::Detection() : Module() { this->isSetup_ = false; }
@@ -102,7 +104,8 @@ auto Detection::getMean(const int& width, const int& height) -> cv::Mat {
 
 auto Detection::render(cv::Mat frame, const cv::Mat& detectionMat) -> cv::Mat {
   // TODO(raviBhadeshiya) : Refractor required
-  for (int i = 0; i < detectionMat.rows; i++) {
+  for (size_t i : boost::irange(0, detectionMat.rows)) {
+  // for (int i = 0; i < detectionMat.rows; i++) {
     // get confidence of detected object
     float confidence = detectionMat.at<float>(i, 2);
     // Render only with higher confidence level
