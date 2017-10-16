@@ -32,10 +32,12 @@ matrix:
             - libtiff-dev
             - libjasper-dev
             - libdc1394-22-dev
+            - libboost-all-dev
       env: COMPILER=g++-5
 
-## Opencv Installation modules ############################
+
 before_script:
+## Opencv Installation modules ############################
   - git clone https://github.com/opencv/opencv.git
   - cd opencv
   - git checkout 3.3.0
