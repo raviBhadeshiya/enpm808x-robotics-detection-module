@@ -5,7 +5,6 @@
  * @copyright  MIT License (c) 2017 Ravi Bhadeshiya
  */
 #include <gtest/gtest.h>
-#include "mockCamera.hpp"
 
 int main(int argc, char** argv) {
   ::testing::InitGoogleTest(&argc, argv);

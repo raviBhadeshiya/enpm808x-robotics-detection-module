@@ -3,8 +3,8 @@ set(GTEST_SHUFFLE 1)
 add_executable(
     cpp-test
     main.cpp
-    mockCamera.cpp
-    mockDetection.cpp
+    MockCamera.cpp
+    MockDetection.cpp
     ../app/Camera.cpp
     ../app/Detection.cpp
 )

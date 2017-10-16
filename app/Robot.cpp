@@ -31,12 +31,25 @@ auto Robot::setup() -> void {
 auto Robot::update() -> void {
   cv::namedWindow("Display Window", cv::WINDOW_AUTOSIZE);
   cv::Mat frame;
+
+#ifdef IMAGE_SEQUENCE
+  int counter = 0;  // if image sequence init counter
+#endif
+
   for (;;) {
     frame = this->camera_->getData();  // Provide frame or images as init
 
     if (frame.empty()) break;  // if end condition then break
 
     frame = this->detector_->update(frame);  // Detect the objects
+
+#ifdef IMAGE_SEQUENCE
+    // Store each image in output folder
+    std::stringstream file;
+    file << "../output/result" << counter << ".jpg";
+    cv::imwrite(file.str(), frame);
+    counter++;  // increment counter
+#endif
 
     cv::imshow("Display Window", frame);  // Showing image
 

@@ -4,16 +4,21 @@
  * @version    1.0
  * @copyright  MIT License (c) 2017 Ravi Bhadeshiya
  */
-#include "mockCamera.hpp"
+#include <gmock/gmock.h>
+#include <gtest/gtest.h>
+#include "Camera.hpp"
 
 TEST(Camera, init) {
   auto cam = std::make_unique<Camera>();  // init check
+  // ASSERT_EXIT({ cam = std::make_unique<Camera>("../data/*"); },
+  // ::testing::ExitedWithCode(-2), "Should exit");
 }
 
 TEST(Camera, imgSeq_check) {
   // Read png files
   auto cam = std::make_unique<Camera>("../data/*.png");
   // Expected png file
+  auto file = cam->getFilenames();
   auto expected = cv::imread("../data/Lenna.png");
   ASSERT_FALSE(expected.empty());
   // If two image is equal than norm would be zero

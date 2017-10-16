@@ -31,6 +31,6 @@ TEST(Detection, detector) {
     expected = detector->update(expected);
     // If something detected, image should change
     // Compare diff by norm
-    EXPECT_NE(0,
-        cv::norm(expected, cv::imread("../data/Lenna.png"), cv::NORM_L2));
+    ASSERT_TRUE(cv::norm(expected,
+        cv::imread("../data/Lenna.png"), cv::NORM_L2));
 }
