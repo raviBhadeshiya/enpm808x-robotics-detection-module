@@ -18,28 +18,28 @@ class mockCamera : public Camera {
    * @brief      Mock update method
    *
    * @param[in]  Function Name
-   * @param[in]  Return type(args)
+   * @param[in]  Return type(args*)
    */
   MOCK_METHOD0(update, void());
   /**
    * @brief      Mock isOpened method
    *
    * @param[in]  Function Name
-   * @param[in]  Return type(args)
+   * @param[in]  Return type(args*)
    */
   MOCK_METHOD0(isOpened, bool());
   /**
    * @brief      Mock getData method
    *
    * @param[in]  Function Name
-   * @param[in]  Return type(args)
+   * @param[in]  Return type(args*)
    */
   MOCK_METHOD0(getData, cv::Mat());
   /**
    * @brief      Mock getFileName method
    *
    * @param[in]  Function Name
-   * @param[in]  Return type(args)
+   * @param[in]  Return type(args*)
    */
   MOCK_METHOD0(getFilenames, std::vector<cv::String>());
 };
