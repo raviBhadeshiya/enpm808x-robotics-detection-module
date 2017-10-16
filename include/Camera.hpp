@@ -4,11 +4,12 @@
  * @version    1.0
  * @copyright  MIT License (c) 2017 Ravi Bhadeshiya
  *
- * @brief Camera module
+ * @brief Camera Module
  *
  * @section DESCRIPTION
  * This camera module will provide the images for detection
- * by reading jpg/png image or reading a video file
+ * by reading jpg/png images or reading a video files.
+ *
  */
 #pragma once
 #include <memory>
@@ -28,7 +29,7 @@ class Camera : public Sensor<cv::Mat> {
    */
   Camera();
   /**
-   * @brief      Create specific the camera object.
+   * @brief      Create specific the camera object as per file name.
    *
    * @param[in]  id    The device identifier.
    */
