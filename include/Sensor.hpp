@@ -12,12 +12,28 @@ template <class T>
  */
 class Sensor {
  public:
+    /**
+     * @brief      Create the object.
+     */
     Sensor() {}
+    /**
+     * @brief      Destroys the object.
+     */
     virtual ~Sensor() {}
+    /**
+     * @brief      Determines if opened.
+     *
+     * @return     True if opened, False otherwise.
+     */
     virtual bool isOpened() = 0;
+    /**
+     * @brief      Virtual update method
+     */
     virtual void update() = 0;
+    /**
+     * @brief      Gets the data.
+     *
+     * @return     The data as template.
+     */
     virtual T getData() = 0;
 };
-
-// template <class T>
-// Sensor<T>::~Sensor() {}

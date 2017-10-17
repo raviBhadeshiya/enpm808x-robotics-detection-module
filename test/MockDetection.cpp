@@ -9,7 +9,9 @@
 #include <memory>
 #include "Detection.hpp"
 
-// Check the init
+/**
+ * @brief      Init check with detection
+ */
 TEST(Detection, init) {
     // Unique pointer
     auto detector = std::make_unique<Detection>();
@@ -20,6 +22,9 @@ TEST(Detection, init) {
     EXPECT_NO_THROW(detector->update());
 }
 
+/**
+ * @brief      Detection detector abillity check
+ */
 TEST(Detection, detector) {
     // Unique pointer
     auto detector =
@@ -27,11 +32,11 @@ TEST(Detection, detector) {
         "../data/MobileNetSSD_deploy.prototxt",
         "../data/MobileNetSSD_deploy.caffemodel");
     // Read specific image and check
-    auto expected = cv::imread("../data/Lenna.png");
+    auto expected = cv::imread("../data/test/Lenna.png");
     // update method
     expected = detector->update(expected);
     // If something detected, image should change
     // Compare diff by norm
     ASSERT_TRUE(cv::norm(expected,
-        cv::imread("../data/Lenna.png"), cv::NORM_L2));
+        cv::imread("../data/test/Lenna.png"), cv::NORM_L2));
 }

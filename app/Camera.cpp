@@ -9,12 +9,13 @@
 #include "Camera.hpp"
 
 // Default constructor
-Camera::Camera() {
-  // cv::glob("../data/*.jpg",filenames_);
-}
+Camera::Camera() {}
 
 // Overloaded constructor to read files
 Camera::Camera(const std::string& filename) {
+  // TODO(raviBhadeshiya) : Refractor required
+  // TODO(raviBhadeshiya) : process every video file in folder
+
   // Find the extension of file
   auto idx = filename.rfind('.');
   if (idx != std::string::npos) {
@@ -28,14 +29,28 @@ Camera::Camera(const std::string& filename) {
                filename.substr(idx + 1) == "png") {
       // If it is not video file than read all images in that folder
       this->imgSeq_ = true;
-      cv::glob(filename, this->filenames_);
+      auto idx1 = filename.rfind('/');
+      // Convert string to <path>/*.extension
+      auto f =
+          filename.substr(0, idx1 + 1) + "*" + "." + filename.substr(idx + 1);
+      // Read every image and add path to vector
+      cv::glob(f, this->filenames_);
+      // for (auto i : this->filenames_) std::cout << i << std::endl;
     }
   } else {
     // If invalid file than exit wiith error
-    std::cerr << "Invaid Filename!" << std::endl;
-    exit(-2);
+    std::cerr << "Invaid Filename!" << std::endl; exit(-2);
   }
 }
+
+#ifdef CAMERA_ENABLE
+// Overloaded constructor to acess hardware
+Camera::Camera(const int& deviceId) {
+      this->imgSeq_ = false;
+      // Update video capture object
+      this->video_capture_ = cv::VideoCapture(deviceId);
+}
+#endif   // Toogle comment for Hardware Camera enable
 
 // Default constructor
 Camera::~Camera() {}
@@ -73,6 +88,11 @@ auto Camera::isOpened() -> bool {
 // Return images filename in vector
 auto Camera::getFilenames() -> std::vector<cv::String> {
     return this->filenames_;
+}
+
+// Return images filename in vector
+auto Camera::isImageSeq() -> bool {
+    return this->imgSeq_;
 }
 
 // For testing camera but first toggele the comment in header

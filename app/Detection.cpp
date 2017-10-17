@@ -28,10 +28,8 @@ auto Detection::import() -> void {
     // Importing model through caffeImporter
     importer = cv::dnn::createCaffeImporter(this->modelConfiguration_,
                                             this->modelBinary_);
-  } catch (const cv::Exception& err) {
+  } catch (const cv::Exception& err) {std::cerr << err.msg << std::endl;}
     // if any error print it out
-    std::cerr << err.msg << std::endl;
-  }
   // Init the Class's Deep Neural Net
   importer->populateNet(this->net_);
 

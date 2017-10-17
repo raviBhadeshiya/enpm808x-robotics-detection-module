@@ -13,10 +13,10 @@
  */
 #pragma once
 #include <memory>
+#include <string>
 #include "Detection.hpp"
 #include "Camera.hpp"
 
-#define IMAGE_SEQUENCE  // Toogle comment for video sequence demo
 /**
  * @brief      Class for robot
  */
@@ -37,11 +37,29 @@ class Robot {
      */
     auto setup() -> void;
     /**
-     * @brief      Update method
+     * @brief      Overloaded Setup method for video/image sequence
+     *
+     * @param[in]  arg  input string for video/input sequence
      *
      * @return     return none
      */
-    auto update() -> void;
+    auto setup(const std::string& arg) -> void;
+    /**
+     * @brief      Overloaded Setup method for video
+     *
+     * @param[in]  arg  input string for video
+     *
+     * @return     return none
+     */
+    auto setup(const int &deviceId) -> void;
+    /**
+     * @brief      Update method for updating everything
+     *
+     * @param[in]  display  The display as bool default true
+     *
+     * @return     return none
+     */
+    auto update(bool display = true) -> void;
 
  private:
     /**
@@ -52,4 +70,8 @@ class Robot {
      * @brief Camera as unique pointer
      */
     std::unique_ptr<Camera> camera_;
+    /**
+     * @brief isSetup as boolean
+     */
+    bool isSetup_;
 };

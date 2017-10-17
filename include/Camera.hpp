@@ -17,6 +17,8 @@
 #include <string>
 #include <vector>
 #include "Sensor.hpp"
+
+// #define CAMERA_ENABLE  // Toogle comment for Hardware Camera enable
 // #define CAMERA_TEST // Toggle comment as per requirements
 
 /**
@@ -35,6 +37,12 @@ class Camera : public Sensor<cv::Mat> {
    */
   explicit Camera(const std::string& file);
   /**
+   * @brief      Create camera object to access the hardware
+   *
+   * @param[in]  deviceId  The hardware device identifier
+   */
+  explicit Camera(const int& deviceId);
+  /**
    * @brief      Destroys the object.
    */
   ~Camera();
@@ -50,6 +58,12 @@ class Camera : public Sensor<cv::Mat> {
    * @return     True if Camera running, False otherwise.
    */
   auto isOpened() -> bool;
+  /**
+   * @brief      Determines if image sequence.
+   *
+   * @return     True if image sequence, False otherwise.
+   */
+  auto isImageSeq() -> bool;
   /**
    * @brief      Gets the data.
    *

@@ -5,10 +5,11 @@
  * @copyright  MIT License (c) 2017 Ravi Bhadeshiya
  */
 #include <memory>
+#include <string>
 #include "Robot.hpp"
 
 // Create robot object
-Robot::Robot() {}
+Robot::Robot() { isSetup_ = false; }
 
 // Destroy robot object
 Robot::~Robot() {}
@@ -19,44 +20,73 @@ auto Robot::setup() -> void {
       "../data/MobileNetSSD_deploy.prototxt",
       "../data/MobileNetSSD_deploy.caffemodel");  // Load neural net
 
-#ifdef IMAGE_SEQUENCE
+  camera_ = std::make_unique<Camera>();  // Default Camera
+  isSetup_ = false;
+}
+// Setup as preprocessor macro
+auto Robot::setup(const std::string& arg) -> void {
+  detector_ = std::make_unique<Detection>(
+      "../data/MobileNetSSD_deploy.prototxt",
+      "../data/MobileNetSSD_deploy.caffemodel");  // Load neural net
+
   camera_ = std::make_unique<Camera>(
-      "../data/*.jpg");  // Camera will provide image sequence
-#else
-  camera_ = std::make_unique<Camera>(
-      "../data/test.mp4");  // Camera will provide video frame
-#endif
+      arg);  // Camera will provide video frame or image sequence
+  isSetup_ = true;
 }
 
+#ifdef CAMERA_ENABLE
+// Setup as preprocessor macro
+auto Robot::setup(const int& deviceId) -> void {
+  detector_ = std::make_unique<Detection>(
+      "../data/MobileNetSSD_deploy.prototxt",
+      "../data/MobileNetSSD_deploy.caffemodel");  // Load neural net
+
+  camera_ = std::make_unique<Camera>(
+      deviceId);  // Camera will provide video frame or image sequence
+  isSetup_ = true;
+}
+#endif
+
 // Update method for detection and display demo
-auto Robot::update() -> void {
-  cv::namedWindow("Display Window", cv::WINDOW_AUTOSIZE);
+auto Robot::update(bool display) -> void {
+  if (!isSetup_) return;
+
+  if (display) cv::namedWindow("Display Window", cv::WINDOW_AUTOSIZE);
+
   cv::Mat frame;
 
-#ifdef IMAGE_SEQUENCE
-  int counter = 0;  // if image sequence init counter
-#endif
+  int counter = 0;
 
   for (;;) {
-    frame = this->camera_->getData();  // Provide frame or images as init
+    frame = this->camera_->getData();   // Provide frame or images as init
 
-    if (frame.empty()) break;  // if end condition then break
+    if (frame.empty())
+      break;   // if end condition then break
 
-    frame = this->detector_->update(frame);  // Detect the objects
+    // cv::TickMeter tm;
+    // tm.start();
 
-#ifdef IMAGE_SEQUENCE
-    // Store each image in output folder
-    std::stringstream file;
-    file << "../output/result" << counter << ".jpg";
-    cv::imwrite(file.str(), frame);
+    frame = this->detector_->update(frame);
+
+    // tm.stop();
+    // std::cout << "Inference time, ms: " << tm.getTimeMilli() << std::endl;
+    // Detect the objects
+
+    if (this->camera_->isImageSeq()) {
+      // Store each image in output folder
+      std::stringstream file;
+      file << "../output/result" << counter << ".jpg";
+      cv::imwrite(file.str(), frame);
+    }
+
     counter++;  // increment counter
-#endif
 
-    cv::imshow("Display Window", frame);  // Showing image
+    if (display) cv::imshow("Display Window", frame);
+    // Showing image
 
-    if (cv::waitKey(30) >= 0) break;  // Esc for break
+    if (display) if (cv::waitKey(30) >= 0) break;   // Esc for break
   }
   std::cout << "Press ESC for exit.." << std::endl;
-
-  cv::waitKey(0);  // wait for ESC press
+  if (display) cv::waitKey(0);
+  // wait for ESC press
 }
