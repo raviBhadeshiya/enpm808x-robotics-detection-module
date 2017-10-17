@@ -1,0 +1,53 @@
+\href{https://travis-ci.org/raviBhadeshiya/enpm808x-robotics-detection-module}{\tt } \href{https://coveralls.io/github/raviBhadeshiya/enpm808x-robotics-detection-module?branch=master}{\tt } \hyperlink{_l_i_c_e_n_s_e_8md}{!\mbox{[}Packagist\mbox{]}(https\+://img.shields.io/packagist/l/doctrine/orm.svg)} 
+
+
+
+\subsection*{Overview}
+
+Midterm Project for E\+N\+P\+M808x\+: {\bfseries Deep Learning Based Object Detector}
+
+Since the inception of the twenty-\/first century, the autonomous robot has been dominating the consumer market. To function properly in the unpredicted environment Re, they should avoid the collision, follow the lane properly and constantly look for a better path which requires knowledge of the environment. The robotics vision has made tremendous progress in addressing problems. In this midterm project, deep learning-\/based object detector implemented for A\+C\+ME Robotics which enable the robot to acquire knowledge of the environment and provide the ability to an appropriate reaction strategy or planning scheme; a simple and widely applicable strategy being to stop the robot.
+
+
+\begin{DoxyItemize}
+\item This detection module first preprocess input image and detect multiple object with help of \href{https://github.com/weiliu89/caffe/tree/ssd#models}{\tt pre-\/trained deep nerual net}. It will try to identify every object present in scenes and filter out some irrelevant objects with lower confidences which enable precision every time. The nerual net can be further trained for task relevant objects. The deep learning-\/based object detector can process approximately 30-\/25 F\+PS (depending on the speed of your system).
+\item This module uses the technique called \href{https://arxiv.org/abs/1512.02325}{\tt Single-\/\+Shot Detector} to detect multiple objects on image. The Caffe based Open\+Cv Nerural Net was incorporated for this module. For more ref\+:\href{https://github.com/weiliu89/caffe/}{\tt Click Here}
+\item For this module, \hyperlink{class_camera}{Camera} class was also developed to provide the input data for detection by reading jpg/png images or reading video files with format mp4/avi.\+However, with a little modification, it can access the any hardware cameara and provide the live stream for detection which is extremely useful for real-\/time.
+\end{DoxyItemize}
+
+\subsubsection*{Result}
+
+The following result was shown by running the program with sample image sequences. Following sample images were processed with $\sim$40 ms time. 
+
+
+
+
+
+ \subsubsection*{Required Depandencies}
+
+\href{https://docs.opencv.org/trunk/d7/d9f/tutorial_linux_install.html}{\tt }
+
+\#\#\# Build via command-\/line 
+\begin{DoxyCode}
+git clone --recursive https://github.com/raviBhadeshiya/enpm808x-robotics-detection-module.git
+cd <path to repository>
+mkdir build
+cd build
+cmake ..
+make -j$(nproc)
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item To Run tests\+:{\ttfamily ./test/cpp-\/test}
+\item To Run program\+:{\ttfamily ./app/shell-\/app $<$path$>$/filename}
+\item To Run program with Image Sequence\+:{\ttfamily ./app/shell-\/app ../data/$\ast$.jpg}
+\item To Run program with video\+:{\ttfamily ./app/shell-\/app ../data/test.mp4}
+\end{DoxyItemize}
+
+This detection module also support live stream from hardware camera which can be build by defining the preprocessor {\ttfamily \#define C\+A\+M\+E\+R\+A\+\_\+\+E\+N\+A\+B\+LE} in {\bfseries \hyperlink{_camera_8hpp}{Camera.\+hpp}} and following the build and running with {\ttfamily ./app/shell-\/app}. 
+
+ \subsubsection*{Solo Iterative Process}
+
+Solo Iterative process was used for developing this module It can be observed that estimates were improved over time. For detailed spreadsheet\+: \href{https://docs.google.com/spreadsheets/d/1QMfyDhY2k-3UoVmqBBLPma-o_mvVv3tEnGuCV8GbJtA/edit?usp=sharing}{\tt } 
+
+ 

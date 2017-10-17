@@ -1,0 +1,126 @@
+\hypertarget{class_sensor}{}\section{Sensor$<$ T $>$ Class Template Reference}
+\label{class_sensor}\index{Sensor$<$ T $>$@{Sensor$<$ T $>$}}
+
+
+Virtual Class for every sensor.  
+
+
+
+
+{\ttfamily \#include $<$Sensor.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sensor_aec4ccadfbcd62394d8eb7c067079c533}{Sensor} ()
+\begin{DoxyCompactList}\small\item\em Create the object. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_sensor_a33f614626c02a1c7bc9529fd7b7b9888}{$\sim$\+Sensor} ()
+\begin{DoxyCompactList}\small\item\em Destroys the object. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_sensor_a78f10e5c1fd3c7e5fcbbf4ca735ac1e7}{is\+Opened} ()=0
+\begin{DoxyCompactList}\small\item\em Determines if opened. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_sensor_a1766329f3c9918fa886ead46b141a6a8}{update} ()=0
+\begin{DoxyCompactList}\small\item\em Virtual update method. \end{DoxyCompactList}\item 
+virtual T \hyperlink{class_sensor_ae9ab3f3715367df03900706eb9806afd}{get\+Data} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Sensor$<$ T $>$}
+
+Virtual Class for every sensor. 
+
+Definition at line 13 of file Sensor.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sensor_aec4ccadfbcd62394d8eb7c067079c533}\label{class_sensor_aec4ccadfbcd62394d8eb7c067079c533}} 
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{Sensor()}{Sensor()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{class_sensor}{Sensor}$<$ T $>$\+::\hyperlink{class_sensor}{Sensor} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create the object. 
+
+
+
+Definition at line 18 of file Sensor.\+hpp.
+
+\mbox{\Hypertarget{class_sensor_a33f614626c02a1c7bc9529fd7b7b9888}\label{class_sensor_a33f614626c02a1c7bc9529fd7b7b9888}} 
+\index{Sensor@{Sensor}!````~Sensor@{$\sim$\+Sensor}}
+\index{````~Sensor@{$\sim$\+Sensor}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{$\sim$\+Sensor()}{~Sensor()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+virtual \hyperlink{class_sensor}{Sensor}$<$ T $>$\+::$\sim$\hyperlink{class_sensor}{Sensor} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroys the object. 
+
+
+
+Definition at line 22 of file Sensor.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sensor_ae9ab3f3715367df03900706eb9806afd}\label{class_sensor_ae9ab3f3715367df03900706eb9806afd}} 
+\index{Sensor@{Sensor}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{get\+Data()}{getData()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+virtual T \hyperlink{class_sensor}{Sensor}$<$ T $>$\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the data. 
+
+\begin{DoxyReturn}{Returns}
+The data as template. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_camera_acd484ba9de5bb9f6a86bf40396dc4e69}{Camera}.
+
+\mbox{\Hypertarget{class_sensor_a78f10e5c1fd3c7e5fcbbf4ca735ac1e7}\label{class_sensor_a78f10e5c1fd3c7e5fcbbf4ca735ac1e7}} 
+\index{Sensor@{Sensor}!is\+Opened@{is\+Opened}}
+\index{is\+Opened@{is\+Opened}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{is\+Opened()}{isOpened()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+virtual bool \hyperlink{class_sensor}{Sensor}$<$ T $>$\+::is\+Opened (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Determines if opened. 
+
+\begin{DoxyReturn}{Returns}
+True if opened, False otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_camera_a635f36e95291ad8962a6b85bf2a12def}{Camera}.
+
+\mbox{\Hypertarget{class_sensor_a1766329f3c9918fa886ead46b141a6a8}\label{class_sensor_a1766329f3c9918fa886ead46b141a6a8}} 
+\index{Sensor@{Sensor}!update@{update}}
+\index{update@{update}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+virtual void \hyperlink{class_sensor}{Sensor}$<$ T $>$\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Virtual update method. 
+
+
+
+Implemented in \hyperlink{class_camera_ae957cc994193c4a367d1e592a16a477f}{Camera}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ravib/enpm808x-\/robotics-\/detection-\/module/include/\hyperlink{_sensor_8hpp}{Sensor.\+hpp}\end{DoxyCompactItemize}

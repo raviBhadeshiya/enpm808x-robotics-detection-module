@@ -1,0 +1,15 @@
+ravib@Inspiron-7559:~/enpm808x-robotics-detection-module$ ../cpplint.py --extensions=h,hpp,cpp $( find . -name *.h -or -name *.hpp -or -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" )
+Done processing ./test/MockCamera.cpp
+Done processing ./test/main.cpp
+Done processing ./test/MockDetection.cpp
+Done processing ./test/MockRobot.cpp
+Done processing ./include/Detection.hpp
+Done processing ./include/Sensor.hpp
+Done processing ./include/Module.hpp
+Done processing ./include/Camera.hpp
+Done processing ./include/Robot.hpp
+Done processing ./app/main.cpp
+Done processing ./app/Camera.cpp
+Done processing ./app/Robot.cpp
+Done processing ./app/Detection.cpp
+Total errors found: 0

@@ -1,0 +1,297 @@
+\hypertarget{class_detection}{}\section{Detection Class Reference}
+\label{class_detection}\index{Detection@{Detection}}
+
+
+Class for object detection.  
+
+
+
+
+{\ttfamily \#include $<$Detection.\+hpp$>$}
+
+
+
+Inheritance diagram for Detection\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{class_detection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Detection\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{class_detection__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_detection_a86e6ebf5a660a29e78ee7a7f08292260}{Detection} ()
+\begin{DoxyCompactList}\small\item\em Create a detector. \end{DoxyCompactList}\item 
+\hyperlink{class_detection_a27315b70fad96e80db6a5b9f52fe7071}{Detection} (const cv\+::\+String \&model\+Config, const cv\+::\+String \&binary)
+\begin{DoxyCompactList}\small\item\em Overloaded constructor for defining parameter. \end{DoxyCompactList}\item 
+\hyperlink{class_detection_abbfdeb60a10132d820fcd20dd292e400}{$\sim$\+Detection} ()
+\begin{DoxyCompactList}\small\item\em Destroys the detector. \end{DoxyCompactList}\item 
+auto \hyperlink{class_detection_a7ec75616ce302825816a0ee350452ef8}{update} (const cv\+::\+Mat \&frame) -\/$>$ cv\+::\+Mat
+\begin{DoxyCompactList}\small\item\em Update method for updating every thing. \end{DoxyCompactList}\item 
+auto \hyperlink{class_detection_a5a959a3e87c5cfba1ae5a78429df6b5c}{update} () -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Overloaded Update method for updating every thing for internal image. \end{DoxyCompactList}\item 
+auto \hyperlink{class_detection_aa1bbf9f6725e8f412f694ca7cf759ff5}{get\+Objects} (const cv\+::\+Mat \&frame) -\/$>$ cv\+::\+Mat
+\begin{DoxyCompactList}\small\item\em Gets the objects. \end{DoxyCompactList}\item 
+auto \hyperlink{class_detection_a898f16ebdea8c1c3cc2cd789a9bfadc9}{pre\+Process} (const cv\+::\+Mat \&frame) -\/$>$ cv\+::\+Mat
+\begin{DoxyCompactList}\small\item\em Preprocess the image for clear detection. \end{DoxyCompactList}\item 
+auto \hyperlink{class_detection_a1a481a0248acb74cb0df6bcd437783eb}{render} (cv\+::\+Mat frame, const cv\+::\+Mat \&detection\+Mat) -\/$>$ cv\+::\+Mat
+\begin{DoxyCompactList}\small\item\em Render the bounding box over the object. \end{DoxyCompactList}\item 
+auto \hyperlink{class_detection_a3a657b6943cacfd4bdd55d90def58427}{is\+Setup} (void) -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Determines if setup. \end{DoxyCompactList}\item 
+auto \hyperlink{class_detection_a3340560fb1e76bd096478d4c29306130}{get\+Mean} (const int \&width, const int \&height) -\/$>$ cv\+::\+Mat
+\begin{DoxyCompactList}\small\item\em Gets the mean. \end{DoxyCompactList}\item 
+auto \hyperlink{class_detection_a0f4577baa1334c17054489a3ab8804ba}{import} () -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Refactored function for importing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for object detection. 
+
+Definition at line 37 of file Detection.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_detection_a86e6ebf5a660a29e78ee7a7f08292260}\label{class_detection_a86e6ebf5a660a29e78ee7a7f08292260}} 
+\index{Detection@{Detection}!Detection@{Detection}}
+\index{Detection@{Detection}!Detection@{Detection}}
+\subsubsection{\texorpdfstring{Detection()}{Detection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Detection\+::\+Detection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a detector. 
+
+
+
+Definition at line 11 of file Detection.\+cpp.
+
+\mbox{\Hypertarget{class_detection_a27315b70fad96e80db6a5b9f52fe7071}\label{class_detection_a27315b70fad96e80db6a5b9f52fe7071}} 
+\index{Detection@{Detection}!Detection@{Detection}}
+\index{Detection@{Detection}!Detection@{Detection}}
+\subsubsection{\texorpdfstring{Detection()}{Detection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Detection\+::\+Detection (\begin{DoxyParamCaption}\item[{const cv\+::\+String \&}]{model\+Config,  }\item[{const cv\+::\+String \&}]{binary }\end{DoxyParamCaption})}
+
+
+
+Overloaded constructor for defining parameter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em model\+Config} & The model configuration \\
+\hline
+\mbox{\tt in}  & {\em binary} & The binary \\
+\hline
+\mbox{\tt in}  & {\em import\+Also} & The import also \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file Detection.\+cpp.
+
+\mbox{\Hypertarget{class_detection_abbfdeb60a10132d820fcd20dd292e400}\label{class_detection_abbfdeb60a10132d820fcd20dd292e400}} 
+\index{Detection@{Detection}!````~Detection@{$\sim$\+Detection}}
+\index{````~Detection@{$\sim$\+Detection}!Detection@{Detection}}
+\subsubsection{\texorpdfstring{$\sim$\+Detection()}{~Detection()}}
+{\footnotesize\ttfamily Detection\+::$\sim$\+Detection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the detector. 
+
+
+
+Definition at line 21 of file Detection.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_detection_a3340560fb1e76bd096478d4c29306130}\label{class_detection_a3340560fb1e76bd096478d4c29306130}} 
+\index{Detection@{Detection}!get\+Mean@{get\+Mean}}
+\index{get\+Mean@{get\+Mean}!Detection@{Detection}}
+\subsubsection{\texorpdfstring{get\+Mean()}{getMean()}}
+{\footnotesize\ttfamily auto Detection\+::get\+Mean (\begin{DoxyParamCaption}\item[{const int \&}]{width,  }\item[{const int \&}]{height }\end{DoxyParamCaption}) -\/$>$ cv\+::\+Mat}
+
+
+
+Gets the mean. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em width} & The width \\
+\hline
+\mbox{\tt in}  & {\em height} & The height\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The mean as image 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file Detection.\+cpp.
+
+\mbox{\Hypertarget{class_detection_aa1bbf9f6725e8f412f694ca7cf759ff5}\label{class_detection_aa1bbf9f6725e8f412f694ca7cf759ff5}} 
+\index{Detection@{Detection}!get\+Objects@{get\+Objects}}
+\index{get\+Objects@{get\+Objects}!Detection@{Detection}}
+\subsubsection{\texorpdfstring{get\+Objects()}{getObjects()}}
+{\footnotesize\ttfamily auto Detection\+::get\+Objects (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{frame }\end{DoxyParamCaption}) -\/$>$ cv\+::\+Mat}
+
+
+
+Gets the objects. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & Input frame as image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return the detected object as image 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file Detection.\+cpp.
+
+\mbox{\Hypertarget{class_detection_a0f4577baa1334c17054489a3ab8804ba}\label{class_detection_a0f4577baa1334c17054489a3ab8804ba}} 
+\index{Detection@{Detection}!import@{import}}
+\index{import@{import}!Detection@{Detection}}
+\subsubsection{\texorpdfstring{import()}{import()}}
+{\footnotesize\ttfamily auto Detection\+::import (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ void}
+
+
+
+Refactored function for importing. 
+
+\begin{DoxyReturn}{Returns}
+Return none 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file Detection.\+cpp.
+
+\mbox{\Hypertarget{class_detection_a3a657b6943cacfd4bdd55d90def58427}\label{class_detection_a3a657b6943cacfd4bdd55d90def58427}} 
+\index{Detection@{Detection}!is\+Setup@{is\+Setup}}
+\index{is\+Setup@{is\+Setup}!Detection@{Detection}}
+\subsubsection{\texorpdfstring{is\+Setup()}{isSetup()}}
+{\footnotesize\ttfamily auto Detection\+::is\+Setup (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determines if setup. 
+
+\begin{DoxyReturn}{Returns}
+True if setup, False otherwise 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_module_a20fb30b0bf6ea415e93efbbacc68043c}{Module}.
+
+
+
+Definition at line 155 of file Detection.\+cpp.
+
+\mbox{\Hypertarget{class_detection_a898f16ebdea8c1c3cc2cd789a9bfadc9}\label{class_detection_a898f16ebdea8c1c3cc2cd789a9bfadc9}} 
+\index{Detection@{Detection}!pre\+Process@{pre\+Process}}
+\index{pre\+Process@{pre\+Process}!Detection@{Detection}}
+\subsubsection{\texorpdfstring{pre\+Process()}{preProcess()}}
+{\footnotesize\ttfamily auto Detection\+::pre\+Process (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{frame }\end{DoxyParamCaption}) -\/$>$ cv\+::\+Mat}
+
+
+
+Preprocess the image for clear detection. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & Input frame as image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return the processed image as image 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file Detection.\+cpp.
+
+\mbox{\Hypertarget{class_detection_a1a481a0248acb74cb0df6bcd437783eb}\label{class_detection_a1a481a0248acb74cb0df6bcd437783eb}} 
+\index{Detection@{Detection}!render@{render}}
+\index{render@{render}!Detection@{Detection}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily auto Detection\+::render (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{frame,  }\item[{const cv\+::\+Mat \&}]{detection\+Mat }\end{DoxyParamCaption}) -\/$>$ cv\+::\+Mat}
+
+
+
+Render the bounding box over the object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & Input frame as image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return the rendered object as image 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file Detection.\+cpp.
+
+\mbox{\Hypertarget{class_detection_a7ec75616ce302825816a0ee350452ef8}\label{class_detection_a7ec75616ce302825816a0ee350452ef8}} 
+\index{Detection@{Detection}!update@{update}}
+\index{update@{update}!Detection@{Detection}}
+\subsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily auto Detection\+::update (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{frame }\end{DoxyParamCaption}) -\/$>$ cv\+::\+Mat}
+
+
+
+Update method for updating every thing. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & The frame as image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return image with detected content if any 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Detection.\+cpp.
+
+\mbox{\Hypertarget{class_detection_a5a959a3e87c5cfba1ae5a78429df6b5c}\label{class_detection_a5a959a3e87c5cfba1ae5a78429df6b5c}} 
+\index{Detection@{Detection}!update@{update}}
+\index{update@{update}!Detection@{Detection}}
+\subsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily auto Detection\+::update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) -\/$>$ void\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Overloaded Update method for updating every thing for internal image. 
+
+\begin{DoxyReturn}{Returns}
+return image with detected content if any 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_module_a21af40d45926cf90d6573f5ac5a1149f}{Module}.
+
+
+
+Definition at line 52 of file Detection.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ravib/enpm808x-\/robotics-\/detection-\/module/include/\hyperlink{_detection_8hpp}{Detection.\+hpp}\item 
+/home/ravib/enpm808x-\/robotics-\/detection-\/module/app/\hyperlink{_detection_8cpp}{Detection.\+cpp}\end{DoxyCompactItemize}

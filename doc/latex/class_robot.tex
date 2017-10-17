@@ -1,0 +1,152 @@
+\hypertarget{class_robot}{}\section{Robot Class Reference}
+\label{class_robot}\index{Robot@{Robot}}
+
+
+Class for robot.  
+
+
+
+
+{\ttfamily \#include $<$Robot.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_robot_a4fc7c70ae20623f05e06f2ecb388b6c4}{Robot} ()
+\begin{DoxyCompactList}\small\item\em Create the robot object. \end{DoxyCompactList}\item 
+\hyperlink{class_robot_a924320124b09c2f2ac1621aa210d5f38}{$\sim$\+Robot} ()
+\begin{DoxyCompactList}\small\item\em Destroys the robot object. \end{DoxyCompactList}\item 
+auto \hyperlink{class_robot_af43ba25439de328499e3d2f266e92592}{setup} () -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Setup method. \end{DoxyCompactList}\item 
+auto \hyperlink{class_robot_a4d757fd25b06c57608c1d69f30581171}{setup} (const std\+::string \&arg) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Overloaded Setup method for video/image sequence. \end{DoxyCompactList}\item 
+auto \hyperlink{class_robot_a20e8d1137e9a7ebcf1fe1c3789e509e8}{setup} (const int \&device\+Id) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Overloaded Setup method for video. \end{DoxyCompactList}\item 
+auto \hyperlink{class_robot_aaec2f96af2ff3dc26c34535903c7baaf}{update} (bool display=true) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Update method for updating everything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for robot. 
+
+Definition at line 23 of file Robot.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_robot_a4fc7c70ae20623f05e06f2ecb388b6c4}\label{class_robot_a4fc7c70ae20623f05e06f2ecb388b6c4}} 
+\index{Robot@{Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!Robot@{Robot}}
+\subsubsection{\texorpdfstring{Robot()}{Robot()}}
+{\footnotesize\ttfamily Robot\+::\+Robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create the robot object. 
+
+
+
+Definition at line 12 of file Robot.\+cpp.
+
+\mbox{\Hypertarget{class_robot_a924320124b09c2f2ac1621aa210d5f38}\label{class_robot_a924320124b09c2f2ac1621aa210d5f38}} 
+\index{Robot@{Robot}!````~Robot@{$\sim$\+Robot}}
+\index{````~Robot@{$\sim$\+Robot}!Robot@{Robot}}
+\subsubsection{\texorpdfstring{$\sim$\+Robot()}{~Robot()}}
+{\footnotesize\ttfamily Robot\+::$\sim$\+Robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the robot object. 
+
+
+
+Definition at line 15 of file Robot.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_robot_af43ba25439de328499e3d2f266e92592}\label{class_robot_af43ba25439de328499e3d2f266e92592}} 
+\index{Robot@{Robot}!setup@{setup}}
+\index{setup@{setup}!Robot@{Robot}}
+\subsubsection{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily auto Robot\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ void}
+
+
+
+Setup method. 
+
+\begin{DoxyReturn}{Returns}
+return none 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file Robot.\+cpp.
+
+\mbox{\Hypertarget{class_robot_a4d757fd25b06c57608c1d69f30581171}\label{class_robot_a4d757fd25b06c57608c1d69f30581171}} 
+\index{Robot@{Robot}!setup@{setup}}
+\index{setup@{setup}!Robot@{Robot}}
+\subsubsection{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily auto Robot\+::setup (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{arg }\end{DoxyParamCaption}) -\/$>$ void}
+
+
+
+Overloaded Setup method for video/image sequence. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em arg} & input string for video/input sequence\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return none 
+\end{DoxyReturn}
+
+
+Definition at line 27 of file Robot.\+cpp.
+
+\mbox{\Hypertarget{class_robot_a20e8d1137e9a7ebcf1fe1c3789e509e8}\label{class_robot_a20e8d1137e9a7ebcf1fe1c3789e509e8}} 
+\index{Robot@{Robot}!setup@{setup}}
+\index{setup@{setup}!Robot@{Robot}}
+\subsubsection{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily auto Robot\+::setup (\begin{DoxyParamCaption}\item[{const int \&}]{device\+Id }\end{DoxyParamCaption}) -\/$>$  void}
+
+
+
+Overloaded Setup method for video. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em arg} & input string for video\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_robot_aaec2f96af2ff3dc26c34535903c7baaf}\label{class_robot_aaec2f96af2ff3dc26c34535903c7baaf}} 
+\index{Robot@{Robot}!update@{update}}
+\index{update@{update}!Robot@{Robot}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily auto Robot\+::update (\begin{DoxyParamCaption}\item[{bool}]{display = {\ttfamily true} }\end{DoxyParamCaption}) -\/$>$ void}
+
+
+
+Update method for updating everything. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em display} & The display as bool default true\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return none 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Robot.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ravib/enpm808x-\/robotics-\/detection-\/module/include/\hyperlink{_robot_8hpp}{Robot.\+hpp}\item 
+/home/ravib/enpm808x-\/robotics-\/detection-\/module/app/\hyperlink{_robot_8cpp}{Robot.\+cpp}\end{DoxyCompactItemize}
