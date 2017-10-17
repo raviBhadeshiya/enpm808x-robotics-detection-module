@@ -22,6 +22,7 @@ Following sample images were processed with ~40 ms time.
 
 ----
 ### Required Depandencies
+[![Packagist](https://img.shields.io/badge/Boost-Click%20Here-yellow.svg)](http://www.boost.org/users/history/version_1_65_1.html)
 [![Packagist](https://img.shields.io/badge/OpenCv%203.3.0-Click%20Here-yellow.svg)](https://docs.opencv.org/trunk/d7/d9f/tutorial_linux_install.html)
 
 ### Build via command-line
@@ -42,8 +43,13 @@ This detection module also support live stream from hardware camera which can be
 **Camera.hpp** and following the build and running with ``` ./app/shell-app ```.
 
 ---
+### Documentation 
+- Detailed documentation can be found under ```/doc/html/index.html``` 
+- To genrate documentation, type this in terminal ```sudo ap-get install doxygen-gui``` and generate it by following simple steps from [here](https://www.stack.nl/~dimitri/doxygen/manual/doxywizard_usage.html).
+
+---
 ### Solo Iterative Process
 Solo Iterative process was used for developing this module It can be observed that estimates were improved over time.   
 For detailed spreadsheet: [![Packagist](https://img.shields.io/badge/SIP-Click%20Here-yellow.svg)](https://docs.google.com/spreadsheets/d/1QMfyDhY2k-3UoVmqBBLPma-o_mvVv3tEnGuCV8GbJtA/edit?usp=sharing)
 
----
+--- 
