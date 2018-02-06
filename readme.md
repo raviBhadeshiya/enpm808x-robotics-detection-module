@@ -7,7 +7,7 @@
 
 ## Overview   
 
-Midterm Project for ENPM808x: **Deep Learning Based Object Detector**  
+ENPM808x: **Deep Learning Based Object Detector**  
 
 Since the inception of the twenty-first century, the autonomous robot has been dominating the consumer market. To function properly in the unpredicted environment Re, they should avoid the collision, follow the lane properly and constantly look for a better path which requires knowledge of the environment. The robotics vision has made tremendous progress in addressing problems. In this midterm project, deep learning-based object detector implemented for ACME Robotics which enable the robot to acquire knowledge of the environment and provide the ability to an appropriate reaction strategy or planning scheme; a simple and widely applicable strategy being to stop the robot.
 
